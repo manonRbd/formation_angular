@@ -1,0 +1,19 @@
+<form [formGroup]="studentForm">
+    <label for="name">Name: 
+        <input type="text" formControlName="name"/> 
+    </label>
+    <label for="grade">Grade: 
+        <input type="number" formControlName="grade"/> 
+    </label>
+    <label for="email">Email: 
+        <input type="email" formControlName="email"/> 
+    </label>
+    <label for="postCode">PostCode: 
+        <input type="text" formControlName="postCode"/> 
+    </label>
+    <button [disabled]="studentForm.invalid" >Submit</button>   
+    
+</form>
+
+<div>Nom value: {{studentForm.controls['name'].value}}</div>
+<div>Form valid: {{studentForm.valid}}</div>

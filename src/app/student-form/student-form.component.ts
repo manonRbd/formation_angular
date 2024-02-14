@@ -15,7 +15,7 @@ export class StudentFormComponent {
     grade: 10
   }
   @Output()
-  addedStudent : EventEmitter<Student> = new EventEmitter<Student>();
+  newStudent : EventEmitter<null> = new EventEmitter();
   message : string = ''; 
   onSubmit() {
     if(this.student.grade <0 || this.student.grade > 100){
@@ -24,7 +24,7 @@ export class StudentFormComponent {
     }
     console.log('Form submitted', this.student);
     this.studentService.addStudent(this.student).subscribe( (response) => { console.log(response);});
-    this.addedStudent.emit(this.student);
+    this.newStudent.emit();
     this.message = 'Student added successfully';
   }
 }
