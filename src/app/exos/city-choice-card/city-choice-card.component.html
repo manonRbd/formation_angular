@@ -1,0 +1,22 @@
+<div>
+    <div class="card">
+        
+        <!-- my first solution 
+            <div class="card-header">
+            <select (change)="onChange($event)">
+                <option value="">--Choisir une ville--</option>
+                <option *ngFor="let city of cities" [value]="city.name + ' ' + city.country">{{city.name}}</option>
+            </select>
+        </div> 
+        <div class="card-body" *ngIf="selectedCity != '' ">
+            <h5 class="card-title text-center">{{selectedCity}}</h5>
+            <img src="assets/images/cities/{{selectedCity.toLowerCase()}}.jpg" alt="{{selectedCity}}" width="100" >
+            <p class="card-text text-center">{{selectedCityCountry}}</p>
+        </div> -->
+        <div class="card-body" *ngIf="city">
+            <h5 class="card-title text-center">{{city.name}}</h5>
+            <img src="assets/images/cities/{{city.img}}" alt="{{city.name}}" width="200" >
+            <p class="card-text text-center">{{city.country}}</p>
+        </div>
+    </div>
+</div>

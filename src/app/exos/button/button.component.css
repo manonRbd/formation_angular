@@ -1,0 +1,59 @@
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px; /* Adjusted width to accommodate labels */
+    height: 34px;
+  }
+  
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  
+  .label-oui,
+  .label-non {
+    flex-grow: 1;
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+    font-size: 12px; /* Adjust font size as needed */
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  .checked .slider {
+    background-color: green;
+  }
+  .checked .label-non {
+    visibility: hidden;
+}
+  
+  .checked .slider:before {
+    transform: translateX(46px);
+  }
+  

@@ -1,0 +1,10 @@
+<h3>{{title}}</h3>
+<p>Age {{ age }} ans</p>
+<button (click)="increment()">Increment</button>
+<p>Compteur: {{counter}}</p>
+
+<div *ngIf="counter > 20">Du calme !</div>
+<p>Premier fruit: {{ fruits[0] }}</p>
+<p *ngFor="let fruit of fruits;">
+    {{ fruit }}
+</p>

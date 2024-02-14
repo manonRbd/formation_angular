@@ -1,0 +1,4 @@
+<div>
+    <h4>Student List {{students.length}} </h4>
+    <app-student-card *ngFor="let student of students" [name]="student.name" [grade]="student.grade"></app-student-card>
+</div>

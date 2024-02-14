@@ -1,0 +1,7 @@
+<div>
+    <select (change)="onChange($event)">
+        <option [value]="null">--Choisir une ville--</option>
+        <option *ngFor="let city of cities" [value]="city.name">{{city.name}}</option>
+    </select>
+    <exos-city-choice-card [city]="selectedCity"></exos-city-choice-card> 
+</div>

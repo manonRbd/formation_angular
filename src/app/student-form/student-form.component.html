@@ -1,0 +1,11 @@
+<div>
+    <h4>Student Form</h4>
+    <article>{{message}}</article>
+    <form (submit)="onSubmit()" #form="ngForm">
+        <input #name="ngModel" name="name" type="text" placeholder="Nom"  required minlength="4" [(ngModel)]="student.name" >
+        <span *ngIf="name.invalid && name.touched">Le nom est requis</span>
+        <input name="grade" type="text" placeholder="Note" required maxlength="3"  [(ngModel)]="student.grade">
+        <button [disabled]="form.invalid" type="submit">Ajouter</button>
+    </form>
+</div>
+<div>{{student | json}}</div>
